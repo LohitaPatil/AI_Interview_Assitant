@@ -17,7 +17,7 @@ mode = st.radio("Activity", ["Generate questions", "Generate coding question", "
 if mode == "Generate questions":
   count = st.slider("Number of Question",1,10,5)
 elif mode == "Generate coding question":
-  topic = st.selectbox("Topics", ["SQL", "Python, "Java", "Html", "cyber Security", "C++/C", "DSA"])
+  topic = st.selectbox("Topics", ["SQL", "Python", "Java", "Html", "cyber Security", "C++/C", "DSA"])
   count = st.slider("Number of Question",1,10,5)
 else:
   question = st.text_area("Enter Interview Question here")
