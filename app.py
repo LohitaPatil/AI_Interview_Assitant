@@ -27,7 +27,7 @@ if st.button("Generate AI response", type = "primary"):
   if mode in ["Evaluate answers", "Improve answer"] and (not question.stip() or not answer.stip()):
     st.warning("Please enter valid question and answer")
     st.stop()
-  topics = "Topics is " + topic + "Difficulty is" + level
+  topics = "Topics is " +topic+ "Difficulty is" + level
   if mode == "Generate questions":
     task = "Generate" + str(count) + "Generate Frequently asked intrview question not the answer only the hint"
   elif mode == "Generate coding question":
