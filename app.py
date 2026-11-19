@@ -42,7 +42,7 @@ if st.button("Generate AI response", type = "primary"):
       response = client.chat.completions.create(
         model = gen_model,
         messages = [{"role":"system",
-                     "content":"Act as a Senior Interviewer,both HR and technical expert"}
+                     "content":"Act as a Senior Interviewer,both HR and technical expert"},
                     {"role":"user",
                      "content":background + task}
                      ],
