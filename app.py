@@ -25,5 +25,5 @@ else:
   answer = st.text_area("Enter your answer", height =160)
 if st.button("Generate AI response", type = "primary"):
   if mode in ["Evaluate answers", "Improve answer"] and (not question.stip()) or (not answer.stip()):
-   st.warning("Please enter valid question and answer")
-  st.stop()
+    st.warning("Please enter valid question and answer")
+    st.stop()
