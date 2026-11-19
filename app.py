@@ -12,9 +12,9 @@ except (KeyError, FileNotFoundError):
 role = st.selectbox("Job Title", ["ML engineer", "DevOps engineer", "Software developer", "Software Engineer", "Prompt engineer", "Data analyst", "Other"])
 if role == "Other":
   st.text_input("Enter the job title","XXXXXXXX")
-model = st.selectbox("Model",["openai/gpt-oss-20b", "openai/gpt-oss-120b"])
+gen_model = st.selectbox("Model",["openai/gpt-oss-20b", "openai/gpt-oss-120b"])
 level = st.selectbox("Difficulty",["Beginner", "Intermediate", "Adavance"])
-gen_mode = st.radio("Activity", ["Generate questions", "Generate coding question", "Evaluate answers", "Improve answer"])
+mode = st.radio("Activity", ["Generate questions", "Generate coding question", "Evaluate answers", "Improve answer"])
 if mode == "Generate questions":
   count = st.slider("Number of Question",1,10,5)
 elif mode == "Generate coding question":
