@@ -8,7 +8,7 @@ try:
   client = Groq(api_key = st.secrets["GROQ_API_KEY"])
 except (KeyError, FileNotFoundError):
   st.error("API key is missing Add it in advance setting")
-  st.stop()
+st.stop()
 role = st.selectbox("Job Title", ["ML engineer", "DevOps engineer", "Software developer", "Software Engineer", "Prompt engineer", "Data analyst", "Other"])
 if role == "Other":
   st.text_input("Enter the job title","XXXXXXXX")
@@ -23,3 +23,7 @@ elif mode == "Generate coding question":
 else:
   question = st.text_area("Enter Interview Question here")
   answer = st.text_area("Enter your answer", height =160)
+if st.button("Generate AI response", type = "primary"):
+  if mode == ["Evaluate answers", "Improve answer"] and (not question.stip()) or (not answer.stip())
+  st.warning("Please enter valid question and answer")
+  st.stop()
